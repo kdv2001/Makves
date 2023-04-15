@@ -1,0 +1,136 @@
+definitions:
+  model.User:
+    properties:
+      '#':
+        type: integer
+      cn:
+        type: string
+      department:
+        type: string
+      domain:
+        type: string
+      flag_disabled:
+        type: boolean
+      flag_dont_expire_password:
+        type: boolean
+      flag_lockout:
+        type: boolean
+      flag_password_cant_change:
+        type: boolean
+      flag_password_not_required:
+        type: boolean
+      has_mail:
+        type: boolean
+      has_phone:
+        type: boolean
+      has_user_principal_name:
+        type: boolean
+      id:
+        type: integer
+      is_admin:
+        type: string
+      is_service:
+        type: string
+      logon_count:
+        type: integer
+      member_of_groups_i_ds:
+        type: string
+      member_of_indirect_groups_i_ds:
+        type: string
+      num_ad_7:
+        type: integer
+      num_ad_14:
+        type: integer
+      num_ad_30:
+        type: integer
+      num_ad_150:
+        type: integer
+      num_ad_365:
+        type: integer
+      num_file_7:
+        type: integer
+      num_file_14:
+        type: integer
+      num_file_30:
+        type: integer
+      num_file_150:
+        type: integer
+      num_file_365:
+        type: integer
+      num_logons_7:
+        type: integer
+      num_logons_14:
+        type: integer
+      num_logons_30:
+        type: integer
+      num_logons_150:
+        type: integer
+      num_logons_365:
+        type: integer
+      num_mailboxes:
+        type: integer
+      num_member_of_groups:
+        type: integer
+      num_member_of_indirect_groups:
+        type: string
+      num_n_7:
+        type: integer
+      num_n_14:
+        type: integer
+      num_n_30:
+        type: integer
+      num_n_150:
+        type: integer
+      num_n_365:
+        type: integer
+      num_share_7:
+        type: integer
+      num_share_14:
+        type: integer
+      num_share_30:
+        type: integer
+      num_share_150:
+        type: integer
+      num_share_365:
+        type: integer
+      owned_files:
+        type: integer
+      title:
+        type: string
+      uid:
+        type: string
+      who:
+        type: string
+    type: object
+host: 127.0.0.1:8000
+info:
+  contact: {}
+  description: This is a sample swagger for Fiber
+  title: Fiber Example API
+  version: "1.0"
+paths:
+  /get-items:
+    get:
+      description: get items by ids
+      parameters:
+      - collectionFormat: csv
+        description: items ids
+        in: query
+        items:
+          type: integer
+        name: id
+        required: true
+        type: array
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.User'
+            type: array
+      summary: get items by ids
+      tags:
+      - user
+swagger: "2.0"
