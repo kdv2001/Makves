@@ -1,0 +1,54 @@
+package model
+
+type User struct {
+	Num                       int    `csv:"#" json:"#"`
+	Id                        int    `csv:"id" json:"id"`
+	UID                       string `csv:"uid" json:"uid"`
+	Domain                    string `csv:"domain" json:"domain"`
+	CN                        string `csv:"cn" json:"cn"`
+	Department                string `csv:"department" json:"department"`
+	Title                     string `csv:"title" json:"title"`
+	Who                       string `csv:"who" json:"who"`
+	LogonCount                int    `csv:"logon_count" json:"logon_count"`
+	NumLogons7                int    `csv:"num_logons7" json:"num_logons_7"`
+	NumShare7                 int    `csv:"num_share7" json:"num_share_7"`
+	NumFile7                  int    `csv:"num_file7" json:"num_file_7"`
+	NumAD7                    int    `csv:"num_ad7" json:"num_ad_7"`
+	NumN7                     int    `csv:"num_n7" json:"num_n_7"`
+	NumLogons14               int    `csv:"num_logons14" json:"num_logons_14"`
+	NumShare14                int    `csv:"num_share14" json:"num_share_14"`
+	NumFile14                 int    `csv:"num_file14" json:"num_file_14"`
+	NumAD14                   int    `csv:"num_ad14" json:"num_ad_14"`
+	NumN14                    int    `csv:"num_n14" json:"num_n_14"`
+	NumLogons30               int    `csv:"num_logons30" json:"num_logons_30"`
+	NumShare30                int    `csv:"num_share30" json:"num_share_30"`
+	NumFile30                 int    `csv:"num_file30" json:"num_file_30"`
+	NumAD30                   int    `csv:"num_ad30" json:"num_ad_30"`
+	NumN30                    int    `csv:"num_n30" json:"num_n_30"`
+	NumLogons150              int    `csv:"num_logons150" json:"num_logons_150"`
+	NumShare150               int    `csv:"num_share150" json:"num_share_150"`
+	NumFile150                int    `csv:"num_file150" json:"num_file_150"`
+	NumAD150                  int    `csv:"num_ad150" json:"num_ad_150"`
+	NumN150                   int    `csv:"num_n150" json:"num_n_150"`
+	NumLogons365              int    `csv:"num_logons365" json:"num_logons_365"`
+	NumShare365               int    `csv:"num_share365" json:"num_share_365"`
+	NumFile365                int    `csv:"num_file365" json:"num_file_365"`
+	NumAD365                  int    `csv:"num_ad365" json:"num_ad_365"`
+	NumN365                   int    `csv:"num_n365" json:"num_n_365"`
+	HasUserPrincipalName      bool   `csv:"has_user_principal_name" json:"has_user_principal_name"`
+	HasMail                   bool   `csv:"has_mail" json:"has_mail"`
+	HasPhone                  bool   `csv:"has_phone" json:"has_phone"`
+	FlagDisabled              bool   `csv:"flag_disabled" json:"flag_disabled"`
+	FlagLockout               bool   `csv:"flag_lockout" json:"flag_lockout"`
+	FlagPasswordNotRequired   bool   `csv:"flag_password_not_required" json:"flag_password_not_required"`
+	FlagPasswordCantChange    bool   `csv:"flag_password_cant_change" json:"flag_password_cant_change"`
+	FlagDontExpirePassword    bool   `csv:"flag_dont_expire_password" json:"flag_dont_expire_password"`
+	OwnedFiles                int    `csv:"owned_files" json:"owned_files"`
+	NumMailboxes              int    `csv:"num_mailboxes" json:"num_mailboxes"`
+	NumMemberOfGroups         int    `csv:"num_member_of_groups" json:"num_member_of_groups"`
+	NumMemberOfIndirectGroups string `csv:"num_member_of_indirect_groups" json:"num_member_of_indirect_groups"`
+	MemberOfIndirectGroupsIDs string `csv:"member_of_indirect_groups_ids" json:"member_of_indirect_groups_i_ds"`
+	MemberOfGroupsIDs         string `csv:"member_of_groups_ids" json:"member_of_groups_i_ds"`
+	IsAdmin                   string `csv:"is_admin" json:"is_admin"`
+	IsService                 string `csv:"is_service" json:"is_service"`
+}
